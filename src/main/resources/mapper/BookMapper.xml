@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.marc.mapper.BookMapper" >
+    <select id="findAll" resultType="Book">
+        select * from book_info
+    </select>
+    
+    <select id="queryForBook" resultType="Book">
+        select * from book_info where book_id=#{book_id}
+    </select>
+
+
+    <insert id="addNewBook" parameterType="com.marc.model.Book">
+        insert into book_info(name,author,publish,ISBN,introduction,language,price,pub_date,class_id,number)
+        values(#{name},#{author},#{publish},#{ISBN},#{introduction},#{language},#{price},#{pub_date},#{class_id},#{number})
+    </insert>
+
+    <delete id="deleteBook">
+        delete from book_info where book_id=#{book_id}
+    </delete>
+
+    <update id="updateBook">
+        update book_info
+        set name=#{name},author=#{author},publish=#{publish},
+        ISBN=#{ISBN},introduction=#{introduction},language=#{language},
+        price=#{price},pub_date=#{pub_date},class_id=#{class_id},number=#{number}
+        where book_id=#{book_id}
+    </update>
+
+
+</mapper>
