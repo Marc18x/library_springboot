@@ -119,6 +119,13 @@
 
             if(layEvent === 'submit'){ //查看操作
                 alert(data.name); //获取当前数据行的某个值 此处应该调用ajax函数
+            } else if (layEvent === 'remove'){
+                //删除操作
+                alert("删除");
+            } else if (layEvent === 'update')
+            {
+                //更新操作
+                alert("更新");
             }
         });
 

@@ -6803,3 +6803,225 @@ org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as express
 2020-06-08 20:29:10.468  INFO 10011 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
 2020-06-08 20:29:23.064  INFO 10011 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2020-06-08 20:29:23.291  INFO 10011 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 22:23:54.179  INFO 10011 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:23:54.180  INFO 10011 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 22:23:54.184  INFO 10011 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-08 22:23:58.196  INFO 11064 --- [restartedMain] com.marc.library.LibraryApplication      : Starting LibraryApplication on MacBook-Pro.local with PID 11064 (/Users/marc/itcast/library_springboot/target/classes started by marc in /Users/marc/itcast/library_springboot)
+2020-06-08 22:23:58.199  INFO 11064 --- [restartedMain] com.marc.library.LibraryApplication      : No active profile set, falling back to default profiles: default
+2020-06-08 22:23:58.264  INFO 11064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-08 22:23:58.264  INFO 11064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-08 22:23:59.480  INFO 11064 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-08 22:23:59.488  INFO 11064 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 22:23:59.489  INFO 11064 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 22:23:59.550  INFO 11064 --- [restartedMain] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 22:23:59.550  INFO 11064 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1286 ms
+2020-06-08 22:23:59.963  INFO 11064 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:24:00.023  INFO 11064 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 22:24:00.181  INFO 11064 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-08 22:24:00.230  INFO 11064 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/library'
+2020-06-08 22:24:00.244  INFO 11064 --- [restartedMain] com.marc.library.LibraryApplication      : Started LibraryApplication in 2.627 seconds (JVM running for 4.326)
+2020-06-08 22:24:14.552  INFO 11064 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 22:24:14.553  INFO 11064 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 22:24:14.559  INFO 11064 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-08 22:26:40.083  INFO 11064 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:26:43.470  INFO 11097 --- [restartedMain] com.marc.library.LibraryApplication      : Starting LibraryApplication on MacBook-Pro.local with PID 11097 (/Users/marc/itcast/library_springboot/target/classes started by marc in /Users/marc/itcast/library_springboot)
+2020-06-08 22:26:43.478  INFO 11097 --- [restartedMain] com.marc.library.LibraryApplication      : No active profile set, falling back to default profiles: default
+2020-06-08 22:26:43.569  INFO 11097 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-08 22:26:43.569  INFO 11097 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-08 22:26:44.842  INFO 11097 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-08 22:26:44.852  INFO 11097 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 22:26:44.853  INFO 11097 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 22:26:44.917  INFO 11097 --- [restartedMain] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 22:26:44.918  INFO 11097 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1349 ms
+2020-06-08 22:26:45.419  INFO 11097 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:26:45.504  INFO 11097 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 22:26:45.684  INFO 11097 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-08 22:26:45.732  INFO 11097 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/library'
+2020-06-08 22:26:45.749  INFO 11097 --- [restartedMain] com.marc.library.LibraryApplication      : Started LibraryApplication in 2.615 seconds (JVM running for 3.572)
+2020-06-08 22:26:52.754  INFO 11097 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 22:26:52.755  INFO 11097 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 22:26:52.761  INFO 11097 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-08 22:30:51.097  INFO 11097 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:30:55.537  INFO 11156 --- [restartedMain] com.marc.library.LibraryApplication      : Starting LibraryApplication on MacBook-Pro.local with PID 11156 (/Users/marc/itcast/library_springboot/target/classes started by marc in /Users/marc/itcast/library_springboot)
+2020-06-08 22:30:55.540  INFO 11156 --- [restartedMain] com.marc.library.LibraryApplication      : No active profile set, falling back to default profiles: default
+2020-06-08 22:30:55.599  INFO 11156 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-08 22:30:55.599  INFO 11156 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-08 22:30:57.131  INFO 11156 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-08 22:30:57.140  INFO 11156 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 22:30:57.141  INFO 11156 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 22:30:57.216  INFO 11156 --- [restartedMain] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 22:30:57.217  INFO 11156 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1617 ms
+2020-06-08 22:30:57.757  INFO 11156 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:30:57.824  INFO 11156 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 22:30:58.088  INFO 11156 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-08 22:30:58.162  INFO 11156 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/library'
+2020-06-08 22:30:58.178  INFO 11156 --- [restartedMain] com.marc.library.LibraryApplication      : Started LibraryApplication in 3.027 seconds (JVM running for 4.016)
+2020-06-08 22:31:09.888  INFO 11156 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 22:31:09.889  INFO 11156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 22:31:09.898  INFO 11156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-06-08 22:31:10.682  INFO 11156 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 22:31:10.801  INFO 11156 --- [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 22:31:51.134  INFO 11156 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:31:51.135  INFO 11156 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 22:31:51.145  INFO 11156 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-08 22:31:54.902  INFO 11170 --- [restartedMain] com.marc.library.LibraryApplication      : Starting LibraryApplication on MacBook-Pro.local with PID 11170 (/Users/marc/itcast/library_springboot/target/classes started by marc in /Users/marc/itcast/library_springboot)
+2020-06-08 22:31:54.904  INFO 11170 --- [restartedMain] com.marc.library.LibraryApplication      : No active profile set, falling back to default profiles: default
+2020-06-08 22:31:54.950  INFO 11170 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-08 22:31:54.950  INFO 11170 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-08 22:31:56.329  INFO 11170 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-08 22:31:56.337  INFO 11170 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 22:31:56.338  INFO 11170 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 22:31:56.420  INFO 11170 --- [restartedMain] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 22:31:56.421  INFO 11170 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1471 ms
+2020-06-08 22:31:57.315  INFO 11170 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:31:57.396  INFO 11170 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 22:31:57.567  INFO 11170 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-08 22:31:57.618  INFO 11170 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/library'
+2020-06-08 22:31:57.633  INFO 11170 --- [restartedMain] com.marc.library.LibraryApplication      : Started LibraryApplication in 3.042 seconds (JVM running for 4.056)
+2020-06-08 22:31:58.275  INFO 11170 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 22:31:58.280  INFO 11170 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 22:31:58.287  INFO 11170 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-06-08 22:32:46.446  INFO 11170 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:32:50.101  INFO 11189 --- [restartedMain] com.marc.library.LibraryApplication      : Starting LibraryApplication on MacBook-Pro.local with PID 11189 (/Users/marc/itcast/library_springboot/target/classes started by marc in /Users/marc/itcast/library_springboot)
+2020-06-08 22:32:50.104  INFO 11189 --- [restartedMain] com.marc.library.LibraryApplication      : No active profile set, falling back to default profiles: default
+2020-06-08 22:32:50.175  INFO 11189 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-08 22:32:50.175  INFO 11189 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-08 22:32:51.425  INFO 11189 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-08 22:32:51.434  INFO 11189 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 22:32:51.435  INFO 11189 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 22:32:51.494  INFO 11189 --- [restartedMain] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 22:32:51.495  INFO 11189 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1320 ms
+2020-06-08 22:32:52.064  INFO 11189 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:32:52.217  INFO 11189 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 22:32:52.522  INFO 11189 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-08 22:32:52.574  INFO 11189 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/library'
+2020-06-08 22:32:52.591  INFO 11189 --- [restartedMain] com.marc.library.LibraryApplication      : Started LibraryApplication in 2.812 seconds (JVM running for 3.936)
+2020-06-08 22:32:59.588  INFO 11189 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 22:32:59.589  INFO 11189 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 22:32:59.596  INFO 11189 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-06-08 22:33:18.565  INFO 11189 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:33:22.029  INFO 11201 --- [restartedMain] com.marc.library.LibraryApplication      : Starting LibraryApplication on MacBook-Pro.local with PID 11201 (/Users/marc/itcast/library_springboot/target/classes started by marc in /Users/marc/itcast/library_springboot)
+2020-06-08 22:33:22.031  INFO 11201 --- [restartedMain] com.marc.library.LibraryApplication      : No active profile set, falling back to default profiles: default
+2020-06-08 22:33:22.076  INFO 11201 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-08 22:33:22.076  INFO 11201 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-08 22:33:23.403  INFO 11201 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-08 22:33:23.412  INFO 11201 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 22:33:23.413  INFO 11201 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 22:33:23.501  INFO 11201 --- [restartedMain] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 22:33:23.501  INFO 11201 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1425 ms
+2020-06-08 22:33:24.007  INFO 11201 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:33:24.087  INFO 11201 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 22:33:24.286  INFO 11201 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-08 22:33:24.333  INFO 11201 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/library'
+2020-06-08 22:33:24.347  INFO 11201 --- [restartedMain] com.marc.library.LibraryApplication      : Started LibraryApplication in 2.645 seconds (JVM running for 3.382)
+2020-06-08 22:33:27.895  INFO 11201 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 22:33:27.896  INFO 11201 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 22:33:27.902  INFO 11201 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-08 22:33:30.398  INFO 11201 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 22:33:30.518  INFO 11201 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 22:34:52.930  INFO 11201 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:34:52.931  INFO 11201 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 22:34:52.941  INFO 11201 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-08 22:34:56.685  INFO 11221 --- [restartedMain] com.marc.library.LibraryApplication      : Starting LibraryApplication on MacBook-Pro.local with PID 11221 (/Users/marc/itcast/library_springboot/target/classes started by marc in /Users/marc/itcast/library_springboot)
+2020-06-08 22:34:56.687  INFO 11221 --- [restartedMain] com.marc.library.LibraryApplication      : No active profile set, falling back to default profiles: default
+2020-06-08 22:34:56.746  INFO 11221 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-08 22:34:56.746  INFO 11221 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-08 22:34:58.449  INFO 11221 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-08 22:34:58.460  INFO 11221 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 22:34:58.460  INFO 11221 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 22:34:58.553  INFO 11221 --- [restartedMain] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 22:34:58.554  INFO 11221 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1808 ms
+2020-06-08 22:34:59.104  INFO 11221 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:34:59.208  INFO 11221 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 22:34:59.402  INFO 11221 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-08 22:34:59.478  INFO 11221 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/library'
+2020-06-08 22:34:59.495  INFO 11221 --- [restartedMain] com.marc.library.LibraryApplication      : Started LibraryApplication in 3.114 seconds (JVM running for 4.068)
+2020-06-08 22:35:17.780  INFO 11221 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 22:35:17.781  INFO 11221 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 22:35:17.788  INFO 11221 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-06-08 22:35:29.422  INFO 11221 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:35:33.395  INFO 11235 --- [restartedMain] com.marc.library.LibraryApplication      : Starting LibraryApplication on MacBook-Pro.local with PID 11235 (/Users/marc/itcast/library_springboot/target/classes started by marc in /Users/marc/itcast/library_springboot)
+2020-06-08 22:35:33.398  INFO 11235 --- [restartedMain] com.marc.library.LibraryApplication      : No active profile set, falling back to default profiles: default
+2020-06-08 22:35:33.439  INFO 11235 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-08 22:35:33.440  INFO 11235 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-08 22:35:34.862  INFO 11235 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-08 22:35:34.883  INFO 11235 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 22:35:34.883  INFO 11235 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 22:35:34.955  INFO 11235 --- [restartedMain] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 22:35:34.955  INFO 11235 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1515 ms
+2020-06-08 22:35:35.457  INFO 11235 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:35:35.523  INFO 11235 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 22:35:35.740  INFO 11235 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-08 22:35:35.795  INFO 11235 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/library'
+2020-06-08 22:35:35.810  INFO 11235 --- [restartedMain] com.marc.library.LibraryApplication      : Started LibraryApplication in 2.797 seconds (JVM running for 3.756)
+2020-06-08 22:35:37.516  INFO 11235 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 22:35:37.516  INFO 11235 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 22:35:37.523  INFO 11235 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-08 22:35:38.178  INFO 11235 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 22:35:38.295  INFO 11235 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 22:35:52.262  INFO 11235 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:35:52.263  INFO 11235 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 22:35:52.271  INFO 11235 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-08 22:35:56.712  INFO 11242 --- [restartedMain] com.marc.library.LibraryApplication      : Starting LibraryApplication on MacBook-Pro.local with PID 11242 (/Users/marc/itcast/library_springboot/target/classes started by marc in /Users/marc/itcast/library_springboot)
+2020-06-08 22:35:56.716  INFO 11242 --- [restartedMain] com.marc.library.LibraryApplication      : No active profile set, falling back to default profiles: default
+2020-06-08 22:35:56.805  INFO 11242 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-08 22:35:56.806  INFO 11242 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-08 22:36:02.035  INFO 11246 --- [restartedMain] com.marc.library.LibraryApplication      : Starting LibraryApplication on MacBook-Pro.local with PID 11246 (/Users/marc/itcast/library_springboot/target/classes started by marc in /Users/marc/itcast/library_springboot)
+2020-06-08 22:36:02.038  INFO 11246 --- [restartedMain] com.marc.library.LibraryApplication      : No active profile set, falling back to default profiles: default
+2020-06-08 22:36:02.094  INFO 11246 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-08 22:36:02.094  INFO 11246 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-08 22:36:03.545  INFO 11246 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-08 22:36:03.555  INFO 11246 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 22:36:03.556  INFO 11246 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 22:36:03.634  INFO 11246 --- [restartedMain] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 22:36:03.634  INFO 11246 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1540 ms
+2020-06-08 22:36:04.099  INFO 11246 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:36:04.203  INFO 11246 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 22:36:04.467  INFO 11246 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-08 22:36:04.539  INFO 11246 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/library'
+2020-06-08 22:36:04.558  INFO 11246 --- [restartedMain] com.marc.library.LibraryApplication      : Started LibraryApplication in 2.854 seconds (JVM running for 3.634)
+2020-06-08 22:36:08.251  INFO 11246 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 22:36:08.252  INFO 11246 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 22:36:08.260  INFO 11246 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-06-08 22:36:08.921  INFO 11246 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 22:36:09.032  INFO 11246 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-08 22:37:00.213  INFO 11246 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:37:00.213  INFO 11246 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-08 22:37:00.222  INFO 11246 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-08 22:37:03.961  INFO 11263 --- [restartedMain] com.marc.library.LibraryApplication      : Starting LibraryApplication on MacBook-Pro.local with PID 11263 (/Users/marc/itcast/library_springboot/target/classes started by marc in /Users/marc/itcast/library_springboot)
+2020-06-08 22:37:03.964  INFO 11263 --- [restartedMain] com.marc.library.LibraryApplication      : No active profile set, falling back to default profiles: default
+2020-06-08 22:37:04.005  INFO 11263 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-08 22:37:04.005  INFO 11263 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-08 22:37:05.401  INFO 11263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-08 22:37:05.414  INFO 11263 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 22:37:05.414  INFO 11263 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 22:37:05.543  INFO 11263 --- [restartedMain] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 22:37:05.543  INFO 11263 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1538 ms
+2020-06-08 22:37:06.068  INFO 11263 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:37:06.149  INFO 11263 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 22:37:06.466  INFO 11263 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-08 22:37:06.516  INFO 11263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/library'
+2020-06-08 22:37:06.532  INFO 11263 --- [restartedMain] com.marc.library.LibraryApplication      : Started LibraryApplication in 2.936 seconds (JVM running for 3.787)
+2020-06-08 22:37:08.636  INFO 11263 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 22:37:08.636  INFO 11263 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 22:37:08.643  INFO 11263 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-06-08 22:37:18.882  INFO 11263 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:37:22.534  INFO 11276 --- [restartedMain] com.marc.library.LibraryApplication      : Starting LibraryApplication on MacBook-Pro.local with PID 11276 (/Users/marc/itcast/library_springboot/target/classes started by marc in /Users/marc/itcast/library_springboot)
+2020-06-08 22:37:22.537  INFO 11276 --- [restartedMain] com.marc.library.LibraryApplication      : No active profile set, falling back to default profiles: default
+2020-06-08 22:37:22.590  INFO 11276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-08 22:37:22.590  INFO 11276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-08 22:37:24.479  INFO 11276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-08 22:37:24.492  INFO 11276 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-08 22:37:24.492  INFO 11276 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-08 22:37:24.563  INFO 11276 --- [restartedMain] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring embedded WebApplicationContext
+2020-06-08 22:37:24.564  INFO 11276 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1973 ms
+2020-06-08 22:37:25.086  INFO 11276 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 22:37:25.163  INFO 11276 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-08 22:37:25.372  INFO 11276 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-08 22:37:25.433  INFO 11276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/library'
+2020-06-08 22:37:25.448  INFO 11276 --- [restartedMain] com.marc.library.LibraryApplication      : Started LibraryApplication in 3.291 seconds (JVM running for 4.116)
+2020-06-08 22:37:44.047  INFO 11276 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/library]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 22:37:44.048  INFO 11276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-08 22:37:44.053  INFO 11276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-06-08 22:37:44.873  INFO 11276 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-08 22:37:45.013  INFO 11276 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
