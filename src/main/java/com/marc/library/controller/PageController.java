@@ -48,17 +48,17 @@ public class PageController {
      */
     @RequestMapping("/index")
     public String index() {
-        return "redirect:/test/index";
+        return "/index";
     }
 
     @RequestMapping("/test")
     public String test() {
-        return "test";
+        return "/test";
     }
 
     @RequestMapping("/login")
     public String login() {
-        return "test/login";
+        return "/login";
     }
 
     @RequestMapping("/charts")

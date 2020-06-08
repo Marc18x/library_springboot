@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.marc.mapper.AdminMapper" >
+<mapper namespace="com.marc.library.mapper.AdminMapper" >
     <select id="queryForAdmin" resultType="Admin">
         select * from admin where username=#{username} and password=#{password}
     </select>

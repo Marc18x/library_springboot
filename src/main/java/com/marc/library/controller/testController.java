@@ -12,12 +12,12 @@ public class testController {
 
     @RequestMapping("/index")
     public String index() {
-        return "/test/index";
+        return "/index";
     }
 
     @RequestMapping("/login")
     public String login() {
-        return "/test/login";
+        return "/login";
     }
 
     @RequestMapping("/charts")
