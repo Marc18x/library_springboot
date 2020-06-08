@@ -14,7 +14,7 @@
         "url": "/library/Book/index"
     },{
         "name": "新增图书",
-        "url": "pages_model.html"
+        "url": "/library/Book/insert"
     }]
 }, {
     "name": "用户管理",

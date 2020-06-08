@@ -11,7 +11,18 @@
 * 修改config.js中menuUrl，将地址改为绝对路径，修改为格式：/library/data/menu.json
 * 修改script.js中的首页url，也改为绝对地址
 
+### 1.3 使用layui的数据表格，学习数据表格中添加按钮并绑定事件
+详细参考layui开发文档
 
+## 2.Thymeleaf使用
+### 2.1 使用thymeleaf获取根目录地址
+
+```javascript
+var ctxPath  = [[@{/}]];
+```
+
+###2.2 layui和thymeleaf冲突
+在使用表格模板时产生冲突，将[[]]拆成四行即可
 
 ## 问题说明
 ### location.href地址跳转问题需要再次测试

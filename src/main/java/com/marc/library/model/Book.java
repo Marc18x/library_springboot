@@ -1,8 +1,9 @@
 package com.marc.library.model;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class Book {
+public class Book implements Serializable {
     private Integer book_id;
     private String name;
     private String author;

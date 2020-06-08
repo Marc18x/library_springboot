@@ -1,5 +1,6 @@
 package com.marc.library.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.marc.library.mapper.BookMapper;
 import com.marc.library.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,36 +21,42 @@ public class BookController {
     @Autowired
     private BookMapper bookMapper;
 
+
     /**
      * 图书页-首页
-     * @return
+     * @return 简单强制重定向指向index
      */
-    @RequestMapping("/index")
-    public ModelAndView index()
+    @RequestMapping("")
+    public String indexOfAll()
     {
-        List<Book> bookList = bookMapper.findAll();
-        ModelAndView modelAndView = new ModelAndView();
-        //跳转的页面
-        modelAndView.setViewName("/book/index");
-        //添加键值对
-        modelAndView.addObject("bookList", bookList);
-        return modelAndView;
+        return "redirect:/Book/index";
     }
 
+    @RequestMapping("/index")
+    public String index()
+    {
+        return "/book/index";
+    }
 
+    @PostMapping("/findAllBook")
+    @ResponseBody
     /**
-     * 查找所有书籍
-     * @return
+     * 查找所有图书目录
+     * 查找数据 结果转换成JSON格式
      */
-    @RequestMapping("/findBookList")
-    public ModelAndView findAll(){
+    public String findAllBook()
+    {
         List<Book> bookList = bookMapper.findAll();
-        ModelAndView modelAndView = new ModelAndView();
-        //跳转的页面
-        modelAndView.setViewName("/test/bookList");
-        //添加键值对
-        modelAndView.addObject("bookList", bookList);
-        return modelAndView;
+        String json = JSON.toJSONString(bookList);
+        String demo = "{\n" +
+                "    \"code\": 0,\n" +
+                "    \"msg\": \"\",\n" +
+                "    \"count\":" +
+                bookList.size() + ",\n" +
+                "    \"data\":" +
+                json +
+                "\n" + "}";
+        return demo;
     }
 
     /**
@@ -71,9 +78,12 @@ public class BookController {
     }
 
     @RequestMapping("/insert")
+    /**
+     * 页面跳转- 新增书目
+     */
     public String insertBook()
     {
-        return "/test/addNewBook";
+        return "/book/add";
     }
 
     /**
