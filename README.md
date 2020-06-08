@@ -1,4 +1,5 @@
 # SpringBoot 图书管理系统
+框架：SpringBoot + Mybatis + layui
 
 ## 1.测试QAdmin框架
 ### 1.1 修改src目录 使用thymeleaf模板引擎
