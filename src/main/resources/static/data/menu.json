@@ -34,10 +34,10 @@
     "url": "",
     "hidden": false,
     "list": [{
-        "name": "备份数据库",
+        "name": "借阅列表",
         "url": "db_backup.html"
     }, {
-        "name": "还原数据库",
+        "name": "图书借还",
         "url": "db_reduction.html"
     }]
 },{
@@ -46,15 +46,9 @@
     "url": "",
     "hidden": false,
     "list": [{
-        "name": "网站设置",
+        "name": "系统设置",
         "url": "web_index.html"
-    }, {
-        "name": "友情连接",
-        "url": "flink_index.html"
-    }, {
-        "name": "导航管理",
-        "url": "nav_index.html"
-    }, {
+    },  {
         "name": "修改密码",
         "url": "web_pwd.html"
     }, {

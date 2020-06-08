@@ -8,8 +8,8 @@
     <title>新增图书</title>
     <link rel="stylesheet" th:href="@{/common/layui/css/layui.css}">
     <link rel="stylesheet" th:href="@{/admin/css/style.css}">
-    <script th:src="@{/common/layui/layui.js}"></script>
     <script th:src="@{/common/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/common/layui/layui.js}"></script>
     <script th:src="@{/common/vue.min.js}"></script>
 </head>
 <body>
@@ -49,69 +49,93 @@
         <!--右侧-->
         <div class="right">
             <fieldset class="layui-elem-field layui-field-title">
-                <legend>网站配置</legend>
+                <legend>新增图书</legend>
             </fieldset>
-            <form class="layui-form " action="">
-                <div class="layui-form-item">
-                    <label class="layui-form-label">网站名称</label>
+            <!-- 新增图书 -->
+            <form id="addBook" class="layui-form " method="post">
+
+                <div class="layui-form-item" style="display: none">
+                    <label class="layui-form-label">图书编号</label>
                     <div class="layui-input-block">
-                        <input type="text" name="name" value="QAdmin轻量级后台模板" placeholder=""  class="layui-input">
+                        <input type="number" name="book_id"  value="-1"  class="layui-input"  readonly="true">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">网站标题</label>
+                    <label class="layui-form-label">图书名称</label>
                     <div class="layui-input-block">
-                        <input type="text" name="title" value="程序员的专用博客"  placeholder=""  class="layui-input">
+                        <input type="text" name="name"  placeholder="图书名称"  class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">作者</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="author"   placeholder="作者"  class="layui-input">
                     </div>
                 </div>
 
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">关键词</label>
+                    <label class="layui-form-label">出版社</label>
                     <div class="layui-input-block">
-                        <input type="text" name="keywords" value="程序员博客,vue博客,tp5博客" placeholder="" class="layui-input">
+                        <input type="text" name="publish"  placeholder="出版社" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">网站描述</label>
+                    <label class="layui-form-label">ISBN编号</label>
                     <div class="layui-input-block">
-                        <textarea name="description" placeholder=""  class="layui-textarea">专为程序员订制的博客系统</textarea>
+                        <input type="text" name="ISBN"  placeholder="ISBN编号" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">版版所有</label>
+                    <label class="layui-form-label">介绍</label>
                     <div class="layui-input-block">
-                        <input type="text" name="powerby" value="Copyright &copy; 2017-2018 IYCMS. 博客管理系统 版权所有" placeholder="" class="layui-input">
+                        <textarea name="introduction" placeholder="图书介绍"  class="layui-textarea"></textarea>
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">备案号</label>
+                    <label class="layui-form-label">语言</label>
                     <div class="layui-input-block">
-                        <input type="text" name="beian" value="赣ICP备16032092号" placeholder="" class="layui-input">
+                        <input type="text" name="language" placeholder="语言" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">是否闭站</label>
+                    <label class="layui-form-label">价格</label>
                     <div class="layui-input-block">
-                        <input type="checkbox" value="1" name="state" lay-text="是|否"  lay-skin="switch">
+                        <input type="number" name="price"  placeholder="价格" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
-                    <label class="layui-form-label">闭站提示</label>
+                    <label class="layui-form-label">出版日期</label>
                     <div class="layui-input-block">
-                        <textarea name="state_desc" placeholder="" class="layui-textarea">服务器正在打瞌睡!</textarea>
+                        <input type="date" name="pub_date"  placeholder="出版日期" class="layui-input">
                     </div>
                 </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">类别号</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="class_id"  placeholder="类别号" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">数量</label>
+                    <div class="layui-input-block">
+                        <input type="number" name="number"  placeholder="数量" class="layui-input">
+                    </div>
+                </div>
+
                 <div class="layui-form-item">
                     <div class="layui-input-block">
-                        <button class="layui-btn" lay-submit lay-filter="submit">立即提交</button>
-
+                        <button class="layui-btn layui-btn-danger "  lay-filter="cancel">取消</button>
+                        <button class="layui-btn" id="submitAdd" lay-submit lay-filter="submit">立即提交</button>
                     </div>
                 </div>
             </form>
@@ -121,5 +145,28 @@
 </div>
 <script th:src="@{/admin/js/config.js}"></script>
 <script th:src="@{/admin/js/script.js}"></script>
+<script>
+    //点击提交后的函数
+    $("#submitAdd").click(
+        function () {
+            var targetUrl = "add";
+            var data = $("#addBook").serializeArray();
+            var info = JSON.stringify(data);//将表单数据json化
+
+            //提交数据
+            $.post({
+                url:targetUrl,
+                data:data,
+                success:function (data,status) {
+                    alert(data);
+                },
+                error:function () {
+                    alert("请求失败");
+                }
+            })
+
+        }
+    )
+</script>
 </body>
 </html>

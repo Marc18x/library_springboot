@@ -89,22 +89,12 @@ public class BookController {
     /**
      * 增加一条新的图书记录
      */
-    @RequestMapping("/add")
-    public String addBook(@RequestParam("book_id") Integer book_id,
-                          @RequestParam("name") String name,
-                          @RequestParam("author") String author,
-                          @RequestParam("publish") String publish,
-                          @RequestParam("isbn") String ISBN,
-                          @RequestParam("introduction") String introduction,
-                          @RequestParam("language") String language,
-                          @RequestParam("price") Double price,
-                          @RequestParam("pub_date")Date pub_date,
-                          @RequestParam("class_id")Integer class_id,
-                          @RequestParam("number")Integer number)
+    @PostMapping("/add")
+    @ResponseBody
+    public String addBook(Book book)
     {
-        Book book = new Book(book_id,name,author,publish,ISBN,introduction,language,price,pub_date,class_id,number);
         bookMapper.addNewBook(book);
-        return "redirect:findBookList";
+        return "添加成功";
     }
 
 //    @PostMapping("/delete")

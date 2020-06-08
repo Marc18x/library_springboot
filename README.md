@@ -22,8 +22,15 @@
 var ctxPath  = [[@{/}]];
 ```
 
-###2.2 layui和thymeleaf冲突
+### 2.2 layui和thymeleaf冲突
 在使用表格模板时产生冲突，将[[]]拆成四行即可
+
+### 3.JS
+#### 3.1 使用ajax提交表单数据
+直接用ajax的serializeArray()将表单数据序列化，然后传递给controller，确保name和value对应，controller可以自动把json格式的数据转化为对象（预先Serialize)
 
 ## 问题说明
 ### location.href地址跳转问题需要再次测试
+
+### 打印ajax JSON解析form表单出现[object Objecy]的错误
+修改方法：使用JSON.stringify(data)进行转化即可显示，但是传值的时候还是用serializeArray()即可
