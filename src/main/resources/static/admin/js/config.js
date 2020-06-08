@@ -6,10 +6,10 @@ var config = {
     debug: true,
 
     //网站名称 (左上角显示的文字LOGO)
-    webname: 'QAdmin',
+    webname: 'Library',
 
     //菜单列表路径 (可以是本地json,也可以是api接口)
-    menuUrl: 'data/menu.json',
+    menuUrl: '/library/data/menu.json',
 
     //layer全局提示层
     layerMsg: {

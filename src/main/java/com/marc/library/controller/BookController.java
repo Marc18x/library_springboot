@@ -30,7 +30,7 @@ public class BookController {
         List<Book> bookList = bookMapper.findAll();
         ModelAndView modelAndView = new ModelAndView();
         //跳转的页面
-        modelAndView.setViewName("bookList");
+        modelAndView.setViewName("/book/index");
         //添加键值对
         modelAndView.addObject("bookList", bookList);
         return modelAndView;

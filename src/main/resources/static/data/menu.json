@@ -1,23 +1,20 @@
 [{
     "name": "首页",
     "icon": "&#xe68e;",
-    "url": "index.html",
+    "url": "/library/index",
     "hidden": false,
     "list": []
 },{
-    "name": "基本组件",
+    "name": "图书管理",
     "icon": "&#xe653;",
     "url": "",
     "hidden": false,
     "list": [{
-        "name": "layui基本组件",
-        "url": "pages_component.html",
+        "name": "图书目录",
+        "url": "/library/Book/index"
     },{
-        "name": "layui内置模块",
+        "name": "新增图书",
         "url": "pages_model.html"
-    },{
-        "name": "提示框",
-        "url": "pages_msg.html"
     }]
 }, {
     "name": "用户管理",
@@ -32,18 +29,18 @@
         "url": "user_add.html"
     }]
 }, {
-    "name": "文章管理",
-    "icon": "&#xe609;",
+    "name": "借阅管理",
+    "icon": "&#xe857;",
     "url": "",
     "hidden": false,
     "list": [{
-        "name": "栏目管理",
-        "url": "type_index.html"
+        "name": "备份数据库",
+        "url": "db_backup.html"
     }, {
-        "name": "文章管理",
-        "url": "article_index.html"
+        "name": "还原数据库",
+        "url": "db_reduction.html"
     }]
-}, {
+},{
     "name": "系统设置",
     "icon": "&#xe620;",
     "url": "",
@@ -65,27 +62,9 @@
         "url": "web_cache.html"
     }]
 }, {
-    "name": "数据库",
-    "icon": "&#xe857;",
-    "url": "",
-    "hidden": false,
-    "list": [{
-        "name": "备份数据库",
-        "url": "db_backup.html"
-    }, {
-        "name": "还原数据库",
-        "url": "db_reduction.html"
-    }]
-}, {
     "name": "退出登录",
     "icon": "&#xe65c;",
     "url": "out.html",
-    "list": []
-}, {
-    "name": "开发者官网",
-    "icon": "&#xe65f;",
-    "url": "http://www.qadmin.net/",
-    "target": "_blank",
     "list": []
 }, {
     "name": "开发文档",

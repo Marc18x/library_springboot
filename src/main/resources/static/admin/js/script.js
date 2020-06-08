@@ -1,7 +1,7 @@
 
 if(!/^http(s*):\/\//.test(location.href)){
     alert('请先部署到 localhost 下再访问');
-    window.location.href = 'login.html';
+    window.location.href = '/library/login';
 }
 
 
@@ -154,7 +154,7 @@ var vue = new Vue({
             //当前位置
             let address = [{
                 name:'首页',
-                url:'index.html'
+                url:'/library/index'
             }];
             this.menu.forEach((v,k)=>{
                     v.list.forEach((v2,k2)=>{
@@ -223,13 +223,13 @@ function msg(code=1,msg='',url='',s=3) {
 
 
 //百度统计,使用时请去掉
-var _hmt = _hmt || [];
-(function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?2b45cf3bb7ac4664bb612c10feebf85d";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-})();
+// var _hmt = _hmt || [];
+// (function() {
+//     var hm = document.createElement("script");
+//     hm.src = "https://hm.baidu.com/hm.js?2b45cf3bb7ac4664bb612c10feebf85d";
+//     var s = document.getElementsByTagName("script")[0];
+//     s.parentNode.insertBefore(hm, s);
+// })();
 
 
 
