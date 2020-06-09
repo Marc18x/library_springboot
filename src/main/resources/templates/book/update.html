@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>新增图书</title>
+    <title>修改图书信息</title>
     <link rel="stylesheet" th:href="@{/common/layui/css/layui.css}">
     <link rel="stylesheet" th:href="@{/admin/css/style.css}">
     <script th:src="@{/common/jquery-3.3.1.min.js}"></script>
@@ -49,29 +49,29 @@
         <!--右侧-->
         <div class="right">
             <fieldset class="layui-elem-field layui-field-title">
-                <legend>新增图书</legend>
+                <legend>修改图书信息</legend>
             </fieldset>
-            <!-- 新增图书 -->
-            <form id="addBook" class="layui-form " method="post">
+            <!-- 修改图书 -->
+            <form id="updateBook" class="layui-form " lay-filter="updateBook" method="post">
 
                 <div class="layui-form-item" style="display: none">
                     <label class="layui-form-label">图书编号</label>
                     <div class="layui-input-block">
-                        <input type="number" name="book_id"  value="-1"  class="layui-input"  readonly="true">
+                        <input type="number" name="book_id"  th:value="${book.getBook_id()}"  class="layui-input"  readonly="true">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">图书名称</label>
                     <div class="layui-input-block">
-                        <input type="text" name="name"  placeholder="图书名称"  class="layui-input">
+                        <input type="text" name="name"  th:value="${book.getName()}" thplaceholder="图书名称"  class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">作者</label>
                     <div class="layui-input-block">
-                        <input type="text" name="author"   placeholder="作者"  class="layui-input">
+                        <input type="text" name="author"  th:value="${book.getAuthor()}" placeholder="作者"  class="layui-input">
                     </div>
                 </div>
 
@@ -79,56 +79,56 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">出版社</label>
                     <div class="layui-input-block">
-                        <input type="text" name="publish"  placeholder="出版社" class="layui-input">
+                        <input type="text" name="publish"  th:value="${book.getPublish()}" placeholder="出版社" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">ISBN编号</label>
                     <div class="layui-input-block">
-                        <input type="text" name="ISBN"  placeholder="ISBN编号" class="layui-input">
+                        <input type="text" name="ISBN"  th:value="${book.getISBN()}"placeholder="ISBN编号" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">介绍</label>
                     <div class="layui-input-block">
-                        <textarea name="introduction" placeholder="图书介绍"  class="layui-textarea"></textarea>
+                        <textarea name="introduction" th:text="${book.getIntroduction()}" placeholder="图书介绍"  class="layui-textarea"></textarea>
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">语言</label>
                     <div class="layui-input-block">
-                        <input type="text" name="language" placeholder="语言" class="layui-input">
+                        <input type="text" name="language" th:value="${book.getLanguage()}" placeholder="语言" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">价格</label>
                     <div class="layui-input-block">
-                        <input type="number" name="price"  placeholder="价格" class="layui-input">
+                        <input type="number" name="price"  th:value="${book.getPrice()}" placeholder="价格" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">出版日期</label>
                     <div class="layui-input-block">
-                        <input type="date" name="pub_date"  placeholder="出版日期" class="layui-input">
+                        <input type="date" name="pub_date"  th:value="${book.getPub_date()}" placeholder="出版日期" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">类别号</label>
                     <div class="layui-input-block">
-                        <input type="number" name="class_id"  placeholder="类别号" class="layui-input">
+                        <input type="number" name="class_id"  th:value="${book.getClass_id()}" placeholder="类别号" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">数量</label>
                     <div class="layui-input-block">
-                        <input type="number" name="number"  placeholder="数量" class="layui-input">
+                        <input type="number" name="number"   th:value="${book.getNumber()}" placeholder="数量" class="layui-input">
                     </div>
                 </div>
 
@@ -137,9 +137,8 @@
 
             <div class="layui-form-item">
                 <div class="layui-input-block">
-
                     <button class="layui-btn" id="submitAdd" lay-submit lay-filter="submit" >立即提交</button>
-                    <button class="layui-btn layui-btn-danger "  lay-filter="cancel" onclick="reset()">重置</button>
+                    <button class="layui-btn layui-btn-danger "  lay-filter="cancel" onclick="reset()">取消</button>
                 </div>
             </div>
         </div>
@@ -148,15 +147,13 @@
 <script th:src="@{/admin/js/config.js}"></script>
 <script th:src="@{/admin/js/script.js}"></script>
 <script>
-
     function reset(){
-        layer.confirm("确认重置表单吗？",{
+        layer.confirm("确认放弃修改吗？",{
             btn:['确认','取消']
-            ,title:['重置表格']
+            ,title:['放弃修改']
             ,yes:function () {
-                //重置表格
-                layer.msg("表单重置成功")
-                document.getElementById("addBook").reset();  //表单重置
+                //放弃修改 返回index
+                window.location.href="index";
             },btn2:function () {
                 //无事发生
             }
@@ -167,20 +164,23 @@
         var form = layui.form;
         //各种基于事件的操作 此处监听form的submit按钮
         form.on('submit(submit)',function () {
-            var targetUrl = "add";
-            var data = $("#addBook").serializeArray();
+            var targetUrl = "update";
+            var data = $("#updateBook").serializeArray();
             //提交数据
-            layer.confirm("确定提交吗？",{
+            layer.confirm("确定提交修改吗？",{
                 btn: ['确认', '取消'] //可以无限个按钮
-                , title: ['添加图书']
+                , title: ['修改图书信息']
                 , yes: function (index, layero) {
                     //按钮【按钮一】的回调
                     $.post({
                         url:targetUrl,
                         data:data,
-                        success:function () {
-                            layer.msg("添加成功")
-                            document.getElementById("addBook").reset();  //表单重置
+                        success:function (data) {
+                            layer.msg(data);
+                            //页面跳转回index
+                            setTimeout(function () {
+                                window.location.href="index";
+                            }, 1000);
                         },
                         error:function () {
                             layer.alert("请求失败")

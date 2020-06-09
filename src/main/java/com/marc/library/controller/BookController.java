@@ -68,13 +68,12 @@ public class BookController {
      * @return 跳转到template/bookInfo.html
      */
     @RequestMapping("/bookInfo")
-    @ResponseBody
     public ModelAndView bookInfo(@RequestParam("id") Integer id)
     {
         Book book = bookMapper.queryForBook(id);
         ModelAndView modelAndView = new ModelAndView();
         //跳转的页面
-        modelAndView.setViewName("/test/bookInfo");
+        modelAndView.setViewName("/book/info");
         //添加键值对
         modelAndView.addObject("book",book);
         return modelAndView;
@@ -100,14 +99,6 @@ public class BookController {
         return "添加成功";
     }
 
-//    @PostMapping("/delete")
-
-//    public String delete(@RequestParam("id")Integer id){
-//        bookMapper.deleteBook(id);
-//        return "redirect:findBookList";
-//    }
-
-
 
     @RequestMapping("/delete")
     @ResponseBody
@@ -122,17 +113,21 @@ public class BookController {
         return id;
     }
 
+    /**
+     * 获取某本图书信息
+     * @param id
+     * @return
+     */
     @RequestMapping("/getUpdateInfo")
     public ModelAndView getUpdateInfo(@RequestParam("id")Integer id)
     {
         Book book = bookMapper.queryForBook(id);
         ModelAndView modelAndView = new ModelAndView();
         //跳转的页面
-        modelAndView.setViewName("/test/bookUpdate");
+        modelAndView.setViewName("/book/update");
         //添加键值对
         modelAndView.addObject("book",book);
         return modelAndView;
-
     }
 
 
@@ -140,24 +135,9 @@ public class BookController {
      * 更新图书信息
      */
     @PostMapping("update")
-    public String update(@RequestParam("book_id") Integer book_id,
-                         @RequestParam("name") String name,
-                         @RequestParam("author") String author,
-                         @RequestParam("publish") String publish,
-                         @RequestParam("isbn") String ISBN,
-                         @RequestParam("introduction") String introduction,
-                         @RequestParam("language") String language,
-                         @RequestParam("price") Double price,
-                         @RequestParam("pub_date")Date pub_date,
-                         @RequestParam("class_id")Integer class_id,
-                         @RequestParam("number")Integer number){
-        Book book = new Book(book_id,name,author,publish,ISBN,introduction,language,price,pub_date,class_id,number);
+    @ResponseBody
+    public String update(Book book){
         bookMapper.updateBook(book);
-        return "redirect:findBookList";
+        return "修改成功";
     }
-
-
-
-
-
 }

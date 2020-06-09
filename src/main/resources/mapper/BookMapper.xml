@@ -11,7 +11,7 @@
     </select>
 
 
-    <insert id="addNewBook" parameterType="com.marc.library.mapper.BookMapper">
+    <insert id="addNewBook" parameterType="com.marc.library.model.Book">
         insert into book_info(name,author,publish,ISBN,introduction,language,price,pub_date,class_id,number)
         values(#{name},#{author},#{publish},#{ISBN},#{introduction},#{language},#{price},#{pub_date},#{class_id},#{number})
     </insert>
@@ -20,7 +20,7 @@
         delete from book_info where book_id=#{book_id}
     </delete>
 
-    <update id="updateBook">
+    <update id="updateBook" parameterType="com.marc.library.model.Book">
         update book_info
         set name=#{name},author=#{author},publish=#{publish},
         ISBN=#{ISBN},introduction=#{introduction},language=#{language},

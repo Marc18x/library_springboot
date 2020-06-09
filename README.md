@@ -23,6 +23,25 @@
 controller对page和limit做对应查询响应，修改原有查询函数即可
 
 ### 1.5 数据表格全局查询及表格重载reload
+当界面数据发生改变的时候，通过reload函数可以刷新数据表格页面，并对其中的参数进行修改，reload第一个参数指定id，第二个传入修正参数
+
+### 1.6 form提交时 alert和reload冲突问题
+将submit和cancel的按钮移出form标签,自定义两个按钮的onclick事件
+提交完成后，先弹出msg然后再reset表单即可
+重置按钮，直接reset表单
+
+```javascript
+   layer.msg("添加成功")
+   document.getElementById("addBook").reset();  //表单重置   
+```
+如果是页面跳转的情景，可以设置延迟
+```javascript
+layer.msg('提交成功！');
+setTimeout(function () {
+    window.location.href="index";
+   }, 3000); //延迟三秒后再刷新
+```
+或者绑定按钮事件，弹出窗口，当用户点击确认后再跳转
 
 ## 2.Thymeleaf使用
 ### 2.1 使用thymeleaf获取根目录地址
@@ -36,10 +55,13 @@ var ctxPath  = [[@{/}]];
 
 ### 3.JS
 #### 3.1 使用ajax提交表单数据
-直接用ajax的serializeArray()将表单数据序列化，然后传递给controller，确保name和value对应，controller可以自动把json格式的数据转化为对象（预先Serialize)
+直接用ajax的serializeArray()将表单数据序列化，然后传递给controller，确保name和value对应
+controller可以自动把提交的json格式的数据转化为对象（但是记得先对model类预先Serialize)
 
 ### 4. MyBatis
 #### 4.1 Mapper传参设置param别称，则在mybatis的xml文件中无需再声明paramType
+如果你使用了@Param这个传参的话，就不用再写paramType的类型了
+类的话，用了param就直接用别称就可以，否则直接按属性来算
 
 #### 4.2 ResultMap和ResultType区别
 map可以自定义查询输出封装内容，而type必须是指定的类，将查询结果完整封装
@@ -56,3 +78,7 @@ map多使用在连接查询的时候，或者只需要一个表的部分变量
 修改方法：使用JSON.stringify(data)进行转化即可显示，但是传值的时候还是用serializeArray()即可
 
 ### ajax传参 data中key需要加引号表示string
+
+### th标签传入数据，input类型的一般对应是th:value,而textarea对应的是th:text标签
+
+### JS：var name = '${name}';这样子便可以 直接获取到在ModelAndView中绑定的name属性

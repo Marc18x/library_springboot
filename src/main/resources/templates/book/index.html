@@ -73,11 +73,29 @@
 
 <!--生成模块 -->
 <script type="text/html" id="buttonGroup">
-    <button class="layui-btn  layui-btn-normal" value=book_id  lay-event="submit"> 查看 </button>
-    <button class="layui-btn  layui-btn-warm" value=book_id  lay-event="update"> 编辑 </button>
-    <button class="layui-btn  layui-btn-danger" value=book_id  lay-event="remove"> 删除 </button>
+    <button class="layui-btn  layui-btn-normal"  lay-event="submit"> 查看 </button>
+    <button class="layui-btn  layui-btn-warm"   lay-event="update"> 编辑 </button>
+    <button class="layui-btn  layui-btn-danger"  lay-event="remove"> 删除 </button>
 </script>
 <script>
+
+    //以虚拟表单方式提交数据
+    function post(URL, PARAMS) {
+        var temp = document.createElement("form");
+        temp.action = URL;
+        temp.method = "post";
+        temp.style.display = "none";
+        for (var x in PARAMS) {
+            var opt = document.createElement("textarea");
+            opt.name = x;
+            opt.value = PARAMS[x];
+            temp.appendChild(opt);
+        }
+        document.body.appendChild(temp);
+        temp.submit();
+        return temp;
+    }
+
 
     layui.use('table', function(){
         var table = layui.table;
@@ -91,6 +109,7 @@
             ,method: "post" //数据传输接口
             ,height: 1120  //数据表格高度
             ,limit:20 //默认分页显示数据量
+            ,loading:true //加载条
             ,limits:[10, 20, 30, 40, 50]  //可选分页数据量
             ,url: ctxPath + '/Book/findAllBook' //数据接口
             ,page: true //开启分页
@@ -114,7 +133,8 @@
             var tr = obj.tr; //获得当前行 tr 的DOM对象
 
             if(layEvent === 'submit'){ //查看操作
-                alert(data.name); //获取当前数据行的某个值 此处应该调用ajax函数
+                //获取点击的图书的详细信息
+                post("bookInfo",{"id":data.book_id});
             } else if (layEvent === 'remove'){
                 //删除操作
                 layer.confirm('确认删除《'+data.name+'》的的记录吗？', {
@@ -128,6 +148,12 @@
                             , data: {"id":data.book_id}
                             , success: function () {
                                 layer.msg("删除成功");
+                                table.reload('bookList',{
+                                    //数据渲染完的回调
+                                    done:function (res,curr,count) {
+
+                                    }
+                            }) //数据表重载
                             }
                             , error: function () {
                                 layer.msg("请求失败");
@@ -142,7 +168,7 @@
             } else if (layEvent === 'update')
             {
                 //更新操作
-                alert("更新");
+                post("getUpdateInfo",{"id":data.book_id});
             }
         });
     });
