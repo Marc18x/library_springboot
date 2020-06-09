@@ -53,22 +53,22 @@ var ctxPath  = [[@{/}]];
 ### 2.2 layui和thymeleaf冲突
 在使用表格模板时产生冲突，将[[]]拆成四行即可
 
-### 3.JS
-#### 3.1 使用ajax提交表单数据
+## 3.JS
+### 3.1 使用ajax提交表单数据
 直接用ajax的serializeArray()将表单数据序列化，然后传递给controller，确保name和value对应
 controller可以自动把提交的json格式的数据转化为对象（但是记得先对model类预先Serialize)
 
-### 4. MyBatis
-#### 4.1 Mapper传参设置param别称，则在mybatis的xml文件中无需再声明paramType
+## 4. MyBatis
+### 4.1 Mapper传参设置param别称，则在mybatis的xml文件中无需再声明paramType
 如果你使用了@Param这个传参的话，就不用再写paramType的类型了
 类的话，用了param就直接用别称就可以，否则直接按属性来算
 
-#### 4.2 ResultMap和ResultType区别
+### 4.2 ResultMap和ResultType区别
 map可以自定义查询输出封装内容，而type必须是指定的类，将查询结果完整封装
 map多使用在连接查询的时候，或者只需要一个表的部分变量
 
 
-### 5.权限鉴定 拦截器设置
+## 5.权限鉴定 拦截器设置
 
 
 ## 问题说明
