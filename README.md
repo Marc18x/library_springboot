@@ -19,6 +19,10 @@
 监听工具条 layEvent 按钮绑定事件
 
 ### 1.4 layui 分页page实现
+分页查询数据时，向后台提交page和limit两个参数
+controller对page和limit做对应查询响应，修改原有查询函数即可
+
+### 1.5 数据表格全局查询及表格重载reload
 
 ## 2.Thymeleaf使用
 ### 2.1 使用thymeleaf获取根目录地址
@@ -34,8 +38,21 @@ var ctxPath  = [[@{/}]];
 #### 3.1 使用ajax提交表单数据
 直接用ajax的serializeArray()将表单数据序列化，然后传递给controller，确保name和value对应，controller可以自动把json格式的数据转化为对象（预先Serialize)
 
+### 4. MyBatis
+#### 4.1 Mapper传参设置param别称，则在mybatis的xml文件中无需再声明paramType
+
+#### 4.2 ResultMap和ResultType区别
+map可以自定义查询输出封装内容，而type必须是指定的类，将查询结果完整封装
+map多使用在连接查询的时候，或者只需要一个表的部分变量
+
+
+### 5.权限鉴定 拦截器设置
+
+
 ## 问题说明
 ### location.href地址跳转问题需要再次测试
 
 ### 打印ajax JSON解析form表单出现[object Objecy]的错误
 修改方法：使用JSON.stringify(data)进行转化即可显示，但是传值的时候还是用serializeArray()即可
+
+### ajax传参 data中key需要加引号表示string

@@ -28,5 +28,17 @@
         where book_id=#{book_id}
     </update>
 
+    <!--  分页查找   -->
+    <select id="findBookListByPageAndLimit" resultType="Book" >
+        select * from book_info limit #{start},#{limit}
+    </select>
+
+    <!-- 查询图书总量    -->
+    <select id="selectTotalOfBook" resultType="java.lang.Integer">
+        select count(*) from book_info;
+    </select>
+
+
+
 
 </mapper>

@@ -41,20 +41,23 @@ public class BookController {
     @PostMapping("/findAllBook")
     @ResponseBody
     /**
-     * 查找所有图书目录
-     * 查找数据 结果转换成JSON格式
+     * 分页查找图书信息
+     * @param page 当前页码
+     * @param limit 每页查询量
      */
-    public String findAllBook()
+    public String findAllBook(int page,int limit)
     {
-        List<Book> bookList = bookMapper.findAll();
+        int start = (page-1)*limit; //过滤之前的数据
+        int totalOfBook = 0; //数据总量
+        List<Book> bookList = bookMapper.findBookListByPageAndLimit(start,limit);
+        //查询总记录数
+        totalOfBook = bookMapper.selectTotalOfBook();
         String json = JSON.toJSONString(bookList);
         String demo = "{\n" +
                 "    \"code\": 0,\n" +
                 "    \"msg\": \"\",\n" +
-                "    \"count\":" +
-                bookList.size() + ",\n" +
-                "    \"data\":" +
-                json +
+                "    \"count\":" + totalOfBook +
+                ",\n \"data\":" + json +
                 "\n" + "}";
         return demo;
     }
@@ -64,7 +67,7 @@ public class BookController {
      * @param id 检索的图书book_id
      * @return 跳转到template/bookInfo.html
      */
-    @PostMapping("/bookInfo")
+    @RequestMapping("/bookInfo")
     @ResponseBody
     public ModelAndView bookInfo(@RequestParam("id") Integer id)
     {
@@ -111,12 +114,12 @@ public class BookController {
     /**
      * 前端使用ajax提交请求，保持data中key值与此处对应
      * 减少页面的跳转和数据刷新量
+     * 返回删除的记录对应id
      */
     public int delete(int id) {
         //删除图书信息
-//        bookMapper.deleteBook(id);
+        bookMapper.deleteBook(id);
         return id;
-
     }
 
     @RequestMapping("/getUpdateInfo")

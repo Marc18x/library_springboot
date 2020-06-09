@@ -146,7 +146,7 @@
 <script th:src="@{/admin/js/config.js}"></script>
 <script th:src="@{/admin/js/script.js}"></script>
 <script>
-    //点击提交后的函数
+    //点击提交后的绑定事件
     $("#submitAdd").click(
         function () {
             var targetUrl = "add";
@@ -158,10 +158,10 @@
                 url:targetUrl,
                 data:data,
                 success:function (data,status) {
-                    alert(data);
+                    layer.msg("添加成功");
                 },
                 error:function () {
-                    alert("请求失败");
+                   layer.msg("请求失败");
                 }
             })
 

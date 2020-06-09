@@ -16,6 +16,14 @@ public interface BookMapper {
     public List<Book> findAll();
 
     /**
+     * 分页查找图书信息
+     * @param start 起始数据 (page-1)*limit计算而来
+     * @param limit 每页显示数量
+     * @return
+     */
+    public List<Book> findBookListByPageAndLimit(int start,int limit);
+
+    /**
      * 查找书籍
      * @param id
      * @return
@@ -39,5 +47,11 @@ public interface BookMapper {
      * @param book
      */
     public void updateBook(Book book);
+
+    /**
+     * 查询图书总量信息
+     * @return 图书记录总量
+     */
+    public int selectTotalOfBook();
 
 }
